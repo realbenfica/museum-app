@@ -1,5 +1,5 @@
 body {
-    background-color: #FFBA00;
+    background-color: #ffeec6;
     width: 100%;
     color: black;
     font-family: Helvetica;
@@ -9,20 +9,24 @@ body {
 }
 
 main {
-    width: 85%;
+    width: 75%;
     background-color: rgb(255, 255, 255);
-    margin: auto;    
+    margin: auto;  
+   
     
  }
 
  h1 {  
     padding: 40px 0 20px 0;
-    text-align: center;      
+    text-align: center;  
+    background-color: white; 
+    margin:auto;   
  }
 
  h2 {
    height: 125px;
    padding: 125px 20px 0 0;
+    
  }
 
  #gallery {
@@ -30,18 +34,18 @@ main {
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: center;
-   align-items: flex-start;
-   padding: 20px;  
+   padding: 4  0px;  
    
  }
 
  .artObject {
    border-radius: 5%;
    transition: .2s;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
 
  .artObject:hover {
-   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+   transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
  }
 
  a {
@@ -50,7 +54,7 @@ main {
 
  footer {
      margin: auto;
-     padding: 40px 0 20px 0;
-     background-color: #FFBA00;
-     width: 85%;
+     padding: 20px 0 20px 0;
+     background-color: white;
+     width: 75%;
  }
