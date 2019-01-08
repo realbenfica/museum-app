@@ -12,6 +12,7 @@ main {
     width: 85%;
     background-color: rgb(255, 255, 255);
     margin: auto;    
+    
  }
 
  h1 {  
@@ -20,24 +21,36 @@ main {
  }
 
  h2 {
-   margin: auto;
-}
+   height: 125px;
+   padding: 125px 20px 0 0;
+ }
 
  #gallery {
    display: flex;
-   flex-flow: row wrap;
+   flex-direction: row;
+   flex-wrap: wrap;
    justify-content: center;
    align-items: flex-start;
+   padding: 20px;  
+   
  }
 
- .art {
-    padding: 10px;
-    margin: auto;
+ .artObject {
+   border-radius: 5%;
+   transition: .2s;
+ }
+
+ .artObject:hover {
+   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+ }
+
+ a {
+    padding: 20px;
  }
 
  footer {
      margin: auto;
-     padding: 20px 0 20px 0;
+     padding: 40px 0 20px 0;
      background-color: #FFBA00;
      width: 85%;
  }
