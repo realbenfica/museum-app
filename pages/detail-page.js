@@ -30,6 +30,7 @@ function submitComment() {
     // reset the form
     inputField.value = null
     textArea.value = null
+
 }
 
 
