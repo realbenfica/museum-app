@@ -1,6 +1,4 @@
-
-
-const data = {
+  const data = {
     elapsedMilliseconds: 0,
     count: 359,
     countFacets: {
@@ -326,4 +324,42 @@ const data = {
     ]
   }
 
-let paintings = data.artObjects
+const paintings = data.artObjects;
+
+function iterateOverPaintings() {
+    for (i = 0; i < paintings.length; i++){
+          // console.log(paintings[i])
+        const newA = document.createElement ("a");
+        newA.innerText = paintings[i].title;
+        newA.href = "./pages/detail-page.html";
+
+        const newImg = document.createElement ("img");
+        newImg.alt = paintings[i].title;
+        newImg.className = "artObject"
+
+        newImg.src = paintings[i].webImage.url
+        console.log(newImg);
+
+  }
+};
+
+iterateOverPaintings();
+
+
+
+// var newA = document.createElement("a");
+// var retrieveBody = document.getElementById("append");
+// retrieveBody.appendChild(newA);  
+
+
+
+
+
+//   let currentPainting = "current element of array??"
+//   displayPainting(currentPainting)
+// }
+
+
+// function displayPainting (painting) {
+
+// }
