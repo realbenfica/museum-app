@@ -330,7 +330,6 @@ function iterateOverPaintings() {
     for (i = 0; i < paintings.length; i++){
           // console.log(paintings[i])
         const newA = document.createElement ("a");
-        newA.innerText = paintings[i].title;
         newA.href = "./pages/detail-page.html";
 
         const newImg = document.createElement ("img");
@@ -338,13 +337,20 @@ function iterateOverPaintings() {
         newImg.className = "artObject"
 
         newImg.src = paintings[i].webImage.url
-        console.log(newImg);
+    
+
+        newA.appendChild(newImg);
+        
+
+        const gallery = document.getElementById("gallery");
+        gallery.appendChild(newA)
+        
 
   }
 };
 
 iterateOverPaintings();
-
+console.log(gallery);
 
 
 // var newA = document.createElement("a");
