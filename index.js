@@ -326,9 +326,13 @@
 
 const paintings = data.artObjects;
 
-function displayPainting(painting) {
-  for (i = 0; i < paintings.length; i++){
-   
+for (i = 0; i < paintings.length; i++){
+const currentPainting = paintings[i];
+displayPainting(currentPainting)
+}
+
+function displayPainting(painting){
+
       const newA = document.createElement ("a");
       const newImg = document.createElement ("img");
       
@@ -341,8 +345,6 @@ function displayPainting(painting) {
       const gallery = document.getElementById("gallery");
       newA.appendChild(newImg);
       gallery.appendChild(newA);
-           
-  }
-};
+      
+}
 
-displayPainting()
