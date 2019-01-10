@@ -326,46 +326,23 @@
 
 const paintings = data.artObjects;
 
-function iterateOverPaintings() {
-    for (i = 0; i < paintings.length; i++){
-          // console.log(paintings[i])
-        const newA = document.createElement ("a");
-        newA.href = "./pages/detail-page.html";
+function displayPainting(painting) {
+  for (i = 0; i < paintings.length; i++){
+   
+      const newA = document.createElement ("a");
+      const newImg = document.createElement ("img");
+      
+      newA.href = "./pages/detail-page.html";
+      
+      newImg.src = paintings[i].webImage.url
+      newImg.alt = paintings[i].title;
+      newImg.className = "artObject"
 
-        const newImg = document.createElement ("img");
-        newImg.alt = paintings[i].title;
-        newImg.className = "artObject"
-
-        newImg.src = paintings[i].webImage.url
-    
-
-        newA.appendChild(newImg);
-        
-
-        const gallery = document.getElementById("gallery");
-        gallery.appendChild(newA)
-        
-
+      const gallery = document.getElementById("gallery");
+      newA.appendChild(newImg);
+      gallery.appendChild(newA);
+           
   }
 };
 
-iterateOverPaintings();
-console.log(gallery);
-
-
-// var newA = document.createElement("a");
-// var retrieveBody = document.getElementById("append");
-// retrieveBody.appendChild(newA);  
-
-
-
-
-
-//   let currentPainting = "current element of array??"
-//   displayPainting(currentPainting)
-// }
-
-
-// function displayPainting (painting) {
-
-// }
+displayPainting()
